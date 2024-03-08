@@ -1,7 +1,5 @@
 import React from 'react'
 import './login.css'
-import Signup from './Signup'
-import { Route, Routes } from 'react-router-dom'
 
 export default function Login() {
   return (
@@ -11,20 +9,23 @@ export default function Login() {
   
 {/* 
 <h1 align="center">I am in Login page</h1> */}
-<h1>Login Form</h1><br/><br/>
+<h1 align="center">Login Form</h1><br/><br/><br/><br/>
 <div align="center">
-<div class="container">
-  <h2 >Login</h2>
+<div >
+  
   <form>
+    <br/>
         <div>
-          <label>Username</label>
-          <input type="text" id="uname" required/>
+          <h4 align="left">Username</h4>
+          <input type="text" id="username" required/>
         </div>
         <div>
-          <label>Password</label>
-          <input type="password" id="pwd" required/>
+          <h4 align="left">Password</h4>
+          <input type="password" id="password" required/>
         </div>
         <button type="submit" className="button">Login</button>
+        <br/><br/>
+        <h3>Don’t have an account? <a href='./Signup.js'>Signup</a></h3>
       </form>
 </div>
 
@@ -32,8 +33,6 @@ export default function Login() {
 </div>
 
 </div>
-
-
 
   )
 }

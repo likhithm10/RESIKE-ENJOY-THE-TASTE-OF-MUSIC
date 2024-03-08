@@ -1,5 +1,4 @@
 import React from 'react'
-import './navbar.css'
 import './contact.css'
 
 export default function Contact() {
@@ -8,10 +7,10 @@ export default function Contact() {
 {/* <h2 class="header" > I am in About page</h2>   */}
 <div class="info">
 <br/>
-<h1>Contact Form</h1><br/><br/>
+<h1 align="center">Contact Form</h1><br/><br/>
 <div align="center">
-<div class="container">
-  <form>
+<div >
+  <form className='box'>
     <h4 align="left">First Name</h4>
     <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
 
@@ -33,5 +32,6 @@ export default function Contact() {
 </div>
 
 </div>
+
   )
 }
