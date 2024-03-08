@@ -1,20 +1,27 @@
 import React from 'react'
 
-import './navbar.css'
-
 export default function About() {
   return (
-  
+    <div class="main_content">
+    <h2 class="header" align="auto">Resike</h2>  
+    <div class="info">
+    <h2>Welcome to Resike, your ultimate music streaming destination!</h2><br/>
+      <h3>Resike allows you to discover and listen to your favorite music anytime, anywhere.</h3><br/>
+      <h3>Features</h3>
+      <ul>
+        <li>Explore a vast library of songs, albums, and playlists.</li>
+        <li>Create your own playlists and share them with friends.</li>
+        <li>Discover new artists and genres tailored to your taste.</li>
+        <li>Enjoy high-quality audio streaming.</li>
+      </ul><br/>
+      <h3>About the Team</h3>
+      <p>Resike was created by a team of passionate developers dedicated to delivering the best music streaming experience.</p>
+      <p>Our mission is to connect people through music and provide an immersive listening experience for all users.</p>
 
-<div class="main_content">
-{/* <h2 class="header" > I am in About page</h2>   */}
-<div class="info">
+   
+      
+  </div>
   
-
-<h1 align="center">I am in About page</h1>
-  
-</div>
-
 </div>
   )
 }

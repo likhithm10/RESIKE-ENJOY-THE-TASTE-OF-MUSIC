@@ -2,14 +2,15 @@
 //import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import NavBar from './main/NavBar';
+import UserNavBar from './user/UserNavBar';
 
 function App() {
   return (
     <div className="App">
      <BrowserRouter>
      
-        <NavBar/>
-        {/* <userNavBar/> */}
+        {/* <NavBar/> */}
+        <UserNavBar/>
          
       </BrowserRouter>
     </div>

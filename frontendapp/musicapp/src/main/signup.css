@@ -11,10 +11,21 @@ input[type=text] {
   margin-bottom: 16px;
   resize: vertical;
   background-color: #ffffff;
-  
 }
 
 input[type=password] 
+{
+  width: auto;
+  padding: 12px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: #ffffff;
+}
+input[type=date] 
 {
   width: auto;
   padding: 12px;
@@ -40,11 +51,11 @@ input[type=submit]:hover {
   background-color: #4580a0;
 }
 
-form {
+.signupbox {
   border-radius: 5px;
   background-color: #867b7b;
   padding: 20px;
-  width: 25%;
+  width: 35%;
   height: auto;
   opacity: 0.7;
   
