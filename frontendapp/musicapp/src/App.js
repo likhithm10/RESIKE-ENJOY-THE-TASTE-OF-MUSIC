@@ -3,6 +3,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import NavBar from './main/NavBar';
 import UserNavBar from './user/UserNavBar';
+import AdminNavBar from './admin/AdminNavBar';
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
       
      <BrowserRouter>
      
-        <NavBar/>
+        {/* <NavBar/> */}
         {/* <UserNavBar/> */}
+        <AdminNavBar/>
          
       </BrowserRouter>
     </div>
