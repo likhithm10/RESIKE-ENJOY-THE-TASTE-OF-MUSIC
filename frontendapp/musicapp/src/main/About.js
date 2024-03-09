@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div class="main_content">
-    <h2 class="header" align="auto">Resike</h2>  
-    <div class="info">
+    <div className="main_content">
+    <h2 className="header" align="auto">Resike</h2>  
+    <div className="info">
     <h2>Welcome to Resike, your ultimate music streaming destination!</h2><br/>
       <h3>Resike allows you to discover and listen to your favorite music anytime, anywhere.</h3><br/>
       <h3>Features</h3>

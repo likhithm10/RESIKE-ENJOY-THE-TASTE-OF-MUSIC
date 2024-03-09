@@ -3,9 +3,9 @@ import './signup.css'
 
 export default function Signup() {
   return (
-    <div class="main_content">
-    {/* <h2 class="header" > I am in About page</h2>   */}
-    <div class="info">
+    <div className="main_content">
+    {/* <h2 className="header" > I am in About page</h2>   */}
+    <div className="info">
       
     {/* 
     <h1 align="center">I am in Login page</h1> */}
@@ -13,7 +13,7 @@ export default function Signup() {
     <div align="center">
     <div >
       
-      <form className='signupbox'>
+      <form classNameName='signupbox'>
         <br/>
             <div>
               <h4 align="left">Name</h4>
@@ -39,7 +39,7 @@ export default function Signup() {
           <h4 align="left">Confirm Password</h4>
           <input type="password" id="confirmpassword" required/>
         </div>
-            <button type="submit" className="button">Signup</button>
+            <button type="submit" classNameName="button">Signup</button>
             <br/><br/>
             <h3>Already have an account? <a href='./Login.js'>Login</a></h3>
           </form>

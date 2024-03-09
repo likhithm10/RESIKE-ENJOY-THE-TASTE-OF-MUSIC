@@ -11,12 +11,12 @@ import './navbar.css'
 
 export default function MainNavBar() {
   return (
-    <div class="wrapper">
-    <div class="sidebar">
-        <img className='row' src={logo} alt='logo' />
+    <div className="wrapper">
+    <div className="sidebar">
+        <img classNameName='row' src={logo} alt='logo' />
         <br/> <br/> <br/>
         <div >
-    <ul className='navbar'>
+    <ul classNameName='navbar'>
     <li><Link to="/">Home</Link></li>
     <li><Link to="/about">About</Link></li>
     <li><Link to="/login">Login</Link></li>

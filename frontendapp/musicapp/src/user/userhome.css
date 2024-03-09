@@ -16,15 +16,34 @@ input[type=text] {
 
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 150px;
-    max-height: 138px;
-    margin: auto;
+    max-width: 200px;
+    max-height: 170px;
+    
     text-align: center;
     font-family: arial;
     border: 1px solid black; /* Add a 1px solid border with a light gray color */
     padding: 10px; /* Add some padding to the card content */
     background-color: rgb(95, 108, 104);
     border-radius: 10%;
+    margin-top: 50px;
+    
+
+    
+}
+
+.morecard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    max-height: 200px;
+    
+    text-align: center;
+    font-family: arial;
+    border: 1px solid black; /* Add a 1px solid border with a light gray color */
+    padding: 10px; /* Add some padding to the card content */
+    background-color: rgb(95, 108, 104);
+    border-radius: 100%;
+  
+    margin-top: 50px;
     
 
     
@@ -33,11 +52,11 @@ input[type=text] {
 .card1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 200px;
-    margin: auto;
     text-align: center;
     font-family: arial;
     border: 1px solid black; /* Add a 1px solid border with a light gray color */
     padding: 10px; /* Add some padding to the card content */
+    margin: auto;
     
 }
 
@@ -46,5 +65,13 @@ img
     width: 110px;
     border-radius: 10%;
     border: 1px solid black;
-    height: 95px;
+    height: 100px;
+}
+
+.moreimg
+{
+    width: 130px;
+    border-radius: 100%;
+    border: 1px solid black;
+    height: 100px;
 }

@@ -7,6 +7,7 @@ import UserNavBar from './user/UserNavBar';
 function App() {
   return (
     <div className="App">
+      
      <BrowserRouter>
      
         {/* <NavBar/> */}

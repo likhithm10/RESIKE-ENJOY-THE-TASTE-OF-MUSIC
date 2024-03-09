@@ -1,0 +1,30 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+
+  .card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    max-height: 150px;
+    margin: 10px;
+    text-align: center;
+    font-family: arial;
+    border: 1px solid black; /* Add a 1px solid border with a light gray color */
+    padding: 10px; /* Add some padding to the card content */
+    background-color: rgb(95, 108, 104);
+    border-radius: 10%;
+    
+    
+
+    
+}
+
+.imgcd
+{
+  width: 60px;
+  border-radius: 10%;
+  border: 1px solid black;
+  height: 60px;
+}
+

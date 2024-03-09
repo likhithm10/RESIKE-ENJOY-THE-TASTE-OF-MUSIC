@@ -9,12 +9,13 @@ import UserArtists from './UserArtists'
 import UserPlaylist from './UserPlaylist'
 import UserProfile from './UserProfile'
 import Home from '../main/Home'
+//import MainNavBar from '../main/NavBar'
 
 
 export default function UserNavBar() {
   return (
-    <div class="wrapper">
-    <div class="sidebar">
+    <div className="wrapper">
+    <div className="sidebar">
         <img className='row' src={logo} alt='logo' />
         <br/> <br/> <br/>
     <ul className='navbar'>
@@ -34,6 +35,11 @@ export default function UserNavBar() {
         <Route path="/userprofile" Component={UserProfile}/>
         <Route path="/logout" Component={Home}/>
     </Routes>
+    <div className="main_content">
+      {/* <h2 align="right">
+       <input type="text"  name="search" placeholder="Search Albums,Artists, Geners etc..."/>
+       `{"        "}`` </h2> */}
+       </div>
     
 </div>
   )
