@@ -14,8 +14,10 @@ app.use(express.json()) // to parse JSON Data
 app.use(cors())
 
 const userrrouter = require("./routes/userroutes")
+const adminrouter = require("./routes/adminroutes")
 
 app.use("",userrrouter) // it includes user routes
+app.use("",adminrouter) // it includes admin routes
 
 
 const port = 2032

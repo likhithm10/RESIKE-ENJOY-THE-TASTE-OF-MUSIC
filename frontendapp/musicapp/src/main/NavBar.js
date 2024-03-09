@@ -7,6 +7,7 @@ import Signup from './Signup'
 import Contact from './Contact'
 import logo from '../images/logo.png'
 import './navbar.css'
+import AdminLogin from './AdminLogin'
 
 
 export default function MainNavBar() {
@@ -31,6 +32,7 @@ export default function MainNavBar() {
         <Route path="/login" Component={Login}/>
         <Route path="/signup" Component={Signup}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/adminlogin" Component={AdminLogin}/>
     </Routes>
     
 

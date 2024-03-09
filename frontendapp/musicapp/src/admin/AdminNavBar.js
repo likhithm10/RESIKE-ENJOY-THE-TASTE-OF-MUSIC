@@ -15,7 +15,7 @@ export default function AdminNavBar() {
         <img className='row' src={logo} alt='logo' />
         <br/> <br/> <br/>
     <ul className='navbar'>
-    <li><Link to="/">Home</Link></li>
+    <li><Link to="/adminhome">Home</Link></li>
     <li><Link to="/adminplaylist">Playlists</Link></li>
     <li><Link to="/adminalbums">Albums</Link></li>
     <li><Link to="/adminartists">Artists</Link></li>

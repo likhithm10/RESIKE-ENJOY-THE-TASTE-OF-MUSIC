@@ -1,40 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react'
+import './user.css'
 import axios from 'axios';
 
-export default function ViewUsers() {
-  const [users, setUsers] = useState([]);
+export default function UsersData() {
 
-  const fetchUsers = async () => {
-    try {
-      const response = await axios.get('http://localhost:2032/viewusers');
-      setUsers(response.data);
-    } catch (error) {
-      console.error(error.message);
+    const [users, setJobSeekers] = useState([]);
+
+    const fetchJobSeekers = async () => {
+      try {
+        const response = await axios.get('http://localhost:2032/viewusers');
+        setJobSeekers(response.data);
+      } catch (error) {
+        console.error(error.message);
+      }
     }
-  }
-
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  const deleteUser = async (email) => {
-    try {
-      await axios.delete(`http://localhost:2032/deleteuser/${email}`);
-      fetchUsers();
-    } catch (error) {
-      console.error(error.message);
+  
+    useEffect(() => {
+      fetchJobSeekers();
+    }, []);
+  
+    const deleteuser = async (email) => {
+      try {
+        await axios.delete(`http://localhost:2032/deletejobseeker/${email}`);
+        fetchJobSeekers();
+      } catch (error) {
+        console.error(error.message);
+      }
     }
-  }
+  
 
   return (
     <div className="main_content">
     {/* <h2 class="header" > I am in View Users page</h2>   */}
     <div className="info">
       
-    <div style={{ textAlign: 'center' }}>
+    <div style={{ textAlign: 'center' }} >
       <h1>Users</h1>
-      
-      <table border={1} align="center" style={{ width: 'auto', height: 'auto' }}>
+      <br/><br/><br/>
+      <div style={{align:'center'}}>
+      <table border={1}  style={{ width: 'auto', height: 'auto' }} id="table" >
           <thead>
             <tr>
               <th>Name</th>
@@ -55,7 +59,7 @@ export default function ViewUsers() {
         <td>{user.email}</td>
         <td>{user.contact}</td>
         <td>
-          <button onClick={() => deleteUser(user.email)} className='button'>Delete</button>
+          <button onClick={() => deleteuser(user.email)} className='button'>Delete</button>
         </td>
       </tr>
     ))
@@ -66,8 +70,10 @@ export default function ViewUsers() {
   )}
 </tbody>
         </table>
+        </div>
     </div>
     </div>
     </div>
   );
+  
 }
