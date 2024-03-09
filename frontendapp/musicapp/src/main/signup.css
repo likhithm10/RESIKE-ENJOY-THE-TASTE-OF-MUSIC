@@ -25,6 +25,9 @@ input[type=password]
   resize: vertical;
   background-color: #ffffff;
 }
+input[type='number'],
+  input[type='email'],
+  select,
 input[type=date] 
 {
   width: auto;

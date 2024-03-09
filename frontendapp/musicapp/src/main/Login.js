@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './login.css'
 import axios from 'axios';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Signup from './Signup';
+import UserNavBar from './../user/UserNavBar';
 
 export default function Login() {
 
@@ -27,9 +28,13 @@ export default function Login() {
       const response = await axios.post('http://localhost:2032/checkuserlogin', formData);
       if (response.data!=null) 
       {
-        console.log(response.data)
+        // console.log(response.data)
         navigate("../user/UserNavBar.js");
-        navigate("../user/UserHome.js");
+        // //window.location.href="http://localhost:3000/user/UserNavBar.js"
+        // <BrowserRouter>
+        // <UserNavBar/>
+        // </BrowserRouter>
+     
       } 
       else 
       {
@@ -59,7 +64,7 @@ export default function Login() {
         message ? <h4 align="center">{message}</h4> : <h4 align="center">{error}</h4>
       }
       <Routes>
-        <Route path="/" element={<Signup/>} exact/>
+        <Route path="/signup" element={<Signup/>} exact/>
         </Routes>
       <form onSubmit={handleSubmit}>
         <br/>
