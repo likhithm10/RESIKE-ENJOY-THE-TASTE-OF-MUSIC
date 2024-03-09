@@ -9,7 +9,7 @@ export default function Home() {
     <div className="main_content">
         <h2 className="header" >Listen to your favorite music anytime,anywhere </h2>  
         <div className="info">
-          <img classNameName="bgimg" src={mainlogo} alt='mainlogo'/><br/>
+          <img className="bgimg" src={mainlogo} alt='mainlogo'/><br/>
 
         <h1 align="center">✯ TRENDING MUSIC ✯ TRENDING MUSIC ✯ TRENDING MUSIC</h1>
           

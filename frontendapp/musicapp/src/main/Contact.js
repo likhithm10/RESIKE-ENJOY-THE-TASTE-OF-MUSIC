@@ -10,7 +10,7 @@ export default function Contact() {
 <h1 align="center">Contact Form</h1><br/><br/>
 <div align="center">
 <div >
-  <form classNameName='box'>
+  <form className='box'>
     <h4 align="left">First Name</h4>
     <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
 

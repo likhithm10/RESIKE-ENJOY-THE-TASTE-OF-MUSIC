@@ -18,13 +18,16 @@ export default function UserAlbums() {
       <table >
   <tr>
   
-      
+      {
+        
         <div className="card1">
         
         <td><img src={hinana} alt='Album' width="50%" className='imgcd'/></td>
         
         <td><h4 align="top">Hi Nanna </h4></td>
         </div>
+        
+}
         </tr>
         </table>
         

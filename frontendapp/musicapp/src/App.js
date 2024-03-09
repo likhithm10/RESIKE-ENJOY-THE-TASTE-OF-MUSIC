@@ -10,8 +10,8 @@ function App() {
       
      <BrowserRouter>
      
-        {/* <NavBar/> */}
-        <UserNavBar/>
+        <NavBar/>
+        {/* <UserNavBar/> */}
          
       </BrowserRouter>
     </div>

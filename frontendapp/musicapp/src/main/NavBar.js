@@ -13,10 +13,10 @@ export default function MainNavBar() {
   return (
     <div className="wrapper">
     <div className="sidebar">
-        <img classNameName='row' src={logo} alt='logo' />
+        <img className='row' src={logo} alt='logo' />
         <br/> <br/> <br/>
         <div >
-    <ul classNameName='navbar'>
+    <ul className='navbar'>
     <li><Link to="/">Home</Link></li>
     <li><Link to="/about">About</Link></li>
     <li><Link to="/login">Login</Link></li>
