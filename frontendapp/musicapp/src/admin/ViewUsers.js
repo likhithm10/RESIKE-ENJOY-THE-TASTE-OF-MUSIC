@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './user.css'
+import './viewuser.css'
 import axios from 'axios';
 
 export default function UsersData() {
@@ -21,7 +21,7 @@ export default function UsersData() {
   
     const deleteuser = async (email) => {
       try {
-        await axios.delete(`http://localhost:2032/deletejobseeker/${email}`);
+        await axios.delete(`http://localhost:2032/deleteuser/${email}`);
         fetchJobSeekers();
       } catch (error) {
         console.error(error.message);
@@ -37,7 +37,7 @@ export default function UsersData() {
     <div style={{ textAlign: 'center' }} >
       <h1>Users</h1>
       <br/><br/><br/>
-      <div style={{align:'center'}}>
+      <div className='data'>
       <table border={1}  style={{ width: 'auto', height: 'auto' }} id="table" >
           <thead>
             <tr>

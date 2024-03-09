@@ -90,7 +90,7 @@ export default function Signup() {
             </div>
             <div>
               <h4 align="left">Contact No</h4>
-              <input type="number" id="contact" value={formData.contact} onChange={handleChange} pattern="[6789][0-9]{9}" placeholder="MUST be 10 Digits " required/>
+              <input type="text" id="contact" value={formData.contact} onChange={handleChange} pattern="[6789][0-9]{9}" placeholder="MUST be 10 Digits " required/>
             </div>
             <div>
               <h4 align="left">email</h4>

@@ -43,19 +43,19 @@ const User = require("../models/User")
     }
   };
 
-//   const checkadminlogin = async (request, response) => 
-//   {
-//      try 
-//      {
-//        const input = request.body
-//        console.log(input)
-//        const admin = await Admin.findOne(input)
-//        response.json(admin)
-//      } 
-//      catch (error) 
-//      {
-//        response.status(500).send(error.message);
-//      }
-//    };
+  const checkadminlogin = async (request, response) => 
+  {
+     try 
+     {
+       const input = request.body
+       console.log(input)
+       const admin = await Admin.findOne(input)
+       response.json(admin)
+     } 
+     catch (error) 
+     {
+       response.status(500).send(error.message);
+     }
+   };
 
-  module.exports = {viewusers,deleteuser}
+  module.exports = {viewusers,deleteuser,checkadminlogin}

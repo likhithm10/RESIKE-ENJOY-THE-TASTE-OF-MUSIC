@@ -6,5 +6,6 @@ const adminrouter = express.Router()
 // admin routes
 adminrouter.get("/viewusers",admincontroller.viewusers)
 adminrouter.delete("/deleteuser/:email",admincontroller.deleteuser)
+adminrouter.post("/checkuserlogin",usercontroller.checkuserlogin)
 
 module.exports = adminrouter

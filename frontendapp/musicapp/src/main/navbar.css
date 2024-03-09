@@ -10,7 +10,8 @@
   }
   
    body{
-     background-image: url(C:\Users\Lenovo\Desktop\New folder\SDProject\frontend\demo\src\images\Md.jpeg);
+     background-image: url("../images/Md.jpeg");
+     
   }
    
   .wrapper{
