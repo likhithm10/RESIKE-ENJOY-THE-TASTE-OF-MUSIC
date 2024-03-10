@@ -36,7 +36,7 @@ h1{
     padding: 8px;
   }
   #table tr:nth-child(odd){background-color: #8a8989 ; opacity: 0.9;}
-  #table tr:nth-child(even){background-color: #656464;opacity: 0.5;}
+  #table tr:nth-child(even){background-color: #1c1c1c;opacity: 0.7;}
   
   #table tr:hover {background-color: #bc4f4f;}
   

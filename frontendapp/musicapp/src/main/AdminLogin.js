@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './login.css'
 import axios from 'axios';
-import {  Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 //import UserNavBar from './../user/UserNavBar';
 
@@ -29,7 +29,7 @@ export default function AdminLogin() {
       if (response.data!=null) 
       {
         // console.log(response.data)
-        navigate("../admin/AdminNavBar.js");
+        navigate("/adminnavbar");
         // //window.location.href="http://localhost:3000/user/UserNavBar.js"
         // <BrowserRouter>
         // <UserNavBar/>

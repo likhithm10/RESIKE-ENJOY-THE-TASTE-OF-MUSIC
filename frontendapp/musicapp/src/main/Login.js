@@ -29,7 +29,8 @@ export default function Login() {
       if (response.data!=null) 
       {
         // console.log(response.data)
-        navigate("../user/UserNavBar.js");
+        //navigate("/usernavbar/userhome");
+        window.location.replace("/usernavbar")
         // //window.location.href="http://localhost:3000/user/UserNavBar.js"
         // <BrowserRouter>
         // <UserNavBar/>

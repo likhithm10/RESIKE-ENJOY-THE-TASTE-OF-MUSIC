@@ -120,10 +120,17 @@
   {
       height: 500px;
       width: 1290px;
+      border-radius: 2%;
       margin-top: 10px;
       display: flex;
   }
 
   ul{
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
   }
+  .fontIcon{
+    padding-right: 10px;
+  }
+
+  

@@ -5,10 +5,13 @@ import About from './About'
 import Login from './Login'
 import Signup from './Signup'
 import Contact from './Contact'
+import UserNavBar from '../user/UserNavBar'
 import logo from '../images/logo.png'
 import './navbar.css'
 import AdminLogin from './AdminLogin'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faInfoCircle, faSignInAlt, faUserPlus, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import AdminNavBar from '../admin/AdminNavBar'
 
 export default function MainNavBar() {
   return (
@@ -18,21 +21,23 @@ export default function MainNavBar() {
         <br/> <br/> <br/>
         <div >
     <ul className='navbar'>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/about">About</Link></li>
-    <li><Link to="/login">Login</Link></li>
-    <li><Link to="/signup">Sign Up</Link></li>
-    <li><Link to="/contact">Contact Us</Link></li>
+    <li><Link to="/"><FontAwesomeIcon icon={faHome} className='fontIcon'/>Home</Link></li>
+    <li><Link to="/about"><FontAwesomeIcon icon={faInfoCircle} className='fontIcon'/>About</Link></li>
+    <li><Link to="/login"><FontAwesomeIcon icon={faSignInAlt} className='fontIcon'/>Login</Link></li>
+    <li><Link to="/signup"><FontAwesomeIcon icon={faUserPlus} className='fontIcon'/>Sign Up</Link></li>
+    <li><Link to="/contact"><FontAwesomeIcon icon={faEnvelope} className='fontIcon'/>Contact Us</Link></li>
     </ul>
     </div>
     </div>
     <Routes>
         <Route path="/" Component={Home}/>
         <Route path="/about" Component={About}/>
-        <Route path="/login" Component={Login}/>
-        <Route path="/signup" Component={Signup}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/adminlogin" Component={AdminLogin}/>
+        {/* <Route path="/login" Component={Login}/> */}
+        {/* <Route path="/signup" Component={Signup}/> */}
+        {/* <Route path="/contact" element={<Contact/>}/> */}
+        {/* <Route path="/adminlogin" Component={AdminLogin}/> */}
+        <Route path="/usernavbar" Component={UserNavBar}/>
+        <Route path="/adminnavbar" Component={AdminNavBar}/>
     </Routes>
     
 
