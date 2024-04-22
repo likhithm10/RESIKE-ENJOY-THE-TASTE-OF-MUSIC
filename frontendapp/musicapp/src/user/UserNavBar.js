@@ -1,5 +1,5 @@
 import React from 'react'
-import {Routes,Route,Link} from 'react-router-dom'
+import {Routes,Route,Link, useNavigate} from 'react-router-dom'
 import './usernavbar.css'
 import logo from '../images/logo.png'
 import '../images/Md.jpeg'
@@ -13,6 +13,16 @@ import Home from '../main/Home'
 
 
 export default function UserNavBar() {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('isUserLoggedIn');
+    localStorage.removeItem('user');
+    navigate('/login');
+    window.location.reload()
+  };
+
   return (
     <div className="wrapper">
     <div className="sidebar">
@@ -24,7 +34,7 @@ export default function UserNavBar() {
     <li><Link to="/userartists">Artists</Link></li>
     <li><Link to="/userplaylist">My Playlist</Link></li>
     <li><Link to="/userprofile">Profile</Link></li>
-    <li><Link to="/logout">Logout</Link></li>
+    <li><Link to="/logout" onClick={handleLogout}>Logout</Link></li>
     </ul>
     </div>
     <Routes>

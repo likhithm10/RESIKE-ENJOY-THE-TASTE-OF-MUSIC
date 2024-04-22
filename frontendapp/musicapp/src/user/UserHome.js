@@ -32,7 +32,8 @@ export default function userHome() {
         </td>
         
         
-        <td style={{padding:30}}><div className="card">
+        <td style={{padding:30}}>
+          <div className="card">
         
         <img src={hinana} alt='Album' width="50%"/>
         

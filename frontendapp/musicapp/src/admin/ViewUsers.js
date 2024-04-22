@@ -1,33 +1,45 @@
 import React, { useEffect, useState } from 'react'
 import './viewuser.css'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function UsersData() {
+    const navigate = useNavigate();
+    const [users, setUsers] = useState([]);
 
-    const [users, setJobSeekers] = useState([]);
-
-    const fetchJobSeekers = async () => {
+    const fetchUsers = async () => {
       try {
         const response = await axios.get('http://localhost:2032/viewusers');
-        setJobSeekers(response.data);
+        setUsers(response.data);
       } catch (error) {
         console.error(error.message);
       }
     }
   
     useEffect(() => {
-      fetchJobSeekers();
+      fetchUsers();
     }, []);
   
-    const deleteuser = async (email) => {
+    const deleteUser = async (email) => {
       try {
         await axios.delete(`http://localhost:2032/deleteuser/${email}`);
-        fetchJobSeekers();
+        fetchUsers();
       } catch (error) {
         console.error(error.message);
       }
     }
   
+    // const viewUser = async (email) => {
+    //   try 
+    //   {
+    //     navigate(`/viewuserprofile/${email}`)
+    //     window.location.reload()
+    //   } 
+    //   catch (error) 
+    //   {
+    //     console.error(error.message);
+    //   }
+    // }
 
   return (
     <div className="main_content">
@@ -59,7 +71,7 @@ export default function UsersData() {
         <td>{user.email}</td>
         <td>{user.contact}</td>
         <td>
-          <button onClick={() => deleteuser(user.email)} className='button'>Delete</button>
+          <button onClick={() => deleteUser(user.email)} className='button'>Delete</button>
         </td>
       </tr>
     ))

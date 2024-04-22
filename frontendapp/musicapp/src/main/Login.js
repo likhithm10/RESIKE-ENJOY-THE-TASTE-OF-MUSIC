@@ -5,7 +5,7 @@ import {  Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Signup from './Signup';
 //import UserNavBar from './../user/UserNavBar';
 
-export default function Login() {
+export default function Login({ onUserLogin }) {
 
   const [formData, setFormData] = useState({
     email: '',
@@ -28,13 +28,11 @@ export default function Login() {
       const response = await axios.post('http://localhost:2032/checkuserlogin', formData);
       if (response.data!=null) 
       {
-        // console.log(response.data)
-        //navigate("/usernavbar/userhome");
-        window.location.replace("/usernavbar")
-        // //window.location.href="http://localhost:3000/user/UserNavBar.js"
-        // <BrowserRouter>
-        // <UserNavBar/>
-        // </BrowserRouter>
+        onUserLogin(); 
+
+        localStorage.setItem('user', JSON.stringify(response.data));
+        
+        navigate("/userhome");
      
       } 
       else 

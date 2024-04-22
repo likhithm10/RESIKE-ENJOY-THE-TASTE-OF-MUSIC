@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 //import UserNavBar from './../user/UserNavBar';
 
-export default function AdminLogin() {
+export default function AdminLogin({ onAdminLogin }) {
 
   const [formData, setFormData] = useState({
     email: '',
@@ -28,12 +28,11 @@ export default function AdminLogin() {
       const response = await axios.post('http://localhost:2032/checkadminlogin', formData);
       if (response.data!=null) 
       {
-        // console.log(response.data)
-        navigate("/adminnavbar");
-        // //window.location.href="http://localhost:3000/user/UserNavBar.js"
-        // <BrowserRouter>
-        // <UserNavBar/>
-        // </BrowserRouter>
+        onAdminLogin(); 
+
+        localStorage.setItem('admin', JSON.stringify(response.data));
+        
+        navigate("/adminhome");
      
       } 
       else 

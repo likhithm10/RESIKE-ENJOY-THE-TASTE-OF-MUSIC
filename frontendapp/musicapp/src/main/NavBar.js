@@ -5,15 +5,15 @@ import About from './About'
 import Login from './Login'
 import Signup from './Signup'
 import Contact from './Contact'
-import UserNavBar from '../user/UserNavBar'
+// import UserNavBar from '../user/UserNavBar'
 import logo from '../images/logo.png'
 import './navbar.css'
 import AdminLogin from './AdminLogin'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faSignInAlt, faUserPlus, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import AdminNavBar from '../admin/AdminNavBar'
+// import AdminNavBar from '../admin/AdminNavBar'
 
-export default function MainNavBar() {
+export default function MainNavBar({ onAdminLogin,onUserLogin}) {
   return (
     <div className="wrapper">
     <div className="sidebar">
@@ -30,14 +30,12 @@ export default function MainNavBar() {
     </div>
     </div>
     <Routes>
-        <Route path="/" Component={Home}/>
-        <Route path="/about" Component={About}/>
-        {/* <Route path="/login" Component={Login}/> */}
-        {/* <Route path="/signup" Component={Signup}/> */}
-        {/* <Route path="/contact" element={<Contact/>}/> */}
-        {/* <Route path="/adminlogin" Component={AdminLogin}/> */}
-        <Route path="/usernavbar" Component={UserNavBar}/>
-        <Route path="/adminnavbar" Component={AdminNavBar}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/login" element={<Login onUserLogin={onUserLogin}/> }/>
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/adminlogin" element={<AdminLogin onAdminLogin={onAdminLogin}/>}/>
     </Routes>
     
 
