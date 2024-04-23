@@ -22,9 +22,13 @@ export default function UserAlbums() {
         
         <div className="card1">
         
-        <td><img src={hinana} alt='Album' width="50%" className='imgcd'/></td>
+        <td style={{padding:30}}>
+          <div className="card">
         
-        <td><h4 align="top">Hi Nanna </h4></td>
+        <img src={hinana} alt='Album' width="50%"/>
+        
+        <h4>Hi Nanna</h4>
+        </div></td>
         </div>
         
 }

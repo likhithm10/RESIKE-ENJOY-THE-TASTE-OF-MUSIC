@@ -7,6 +7,9 @@ import AdminAlbums from './AdminAlbums'
 import AdminArtists from './AdminArtists'
 import ViewUsers from './ViewUsers'
 import './adminnavbar.css'
+import CreateAlbum from './CreateAlbum'
+import AddSongs from './AddSongs'
+import ViewAlbum from './ViewAlbum'
 
 export default function AdminNavBar() {
 
@@ -40,6 +43,9 @@ export default function AdminNavBar() {
         <Route path="/adminalbums" Component={AdminAlbums}/>
         <Route path="/adminartists" Component={AdminArtists}/>
         <Route path="/viewusers" element={<ViewUsers/>}/>
+        <Route path="/createalbum" element={<CreateAlbum/>}/>
+        <Route path="/addsongs" element={<AddSongs/>}/>
+        <Route path="/viewalbum" element={<ViewAlbum/>}/>
     </Routes>
 
     </div>

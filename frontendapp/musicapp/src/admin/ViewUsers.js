@@ -46,7 +46,7 @@ export default function UsersData() {
     {/* <h2 class="header" > I am in View Users page</h2>   */}
     <div className="info">
       
-    <div style={{ textAlign: 'center' }} >
+    <div align="center" >
       <h1>Users</h1>
       <br/><br/><br/>
       <div className='data'>
