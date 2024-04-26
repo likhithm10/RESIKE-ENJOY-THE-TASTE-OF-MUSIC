@@ -106,7 +106,7 @@ const viewusers = async (request, response) =>
       }
     };
 
-    const viewalbums = async (req, res) => 
+  const viewalbums = async (req, res) => 
 {
   try 
   {
@@ -118,6 +118,8 @@ const viewusers = async (request, response) =>
     res.status(500).send(error.message);
   }
 };
+
+
     
 const albumimage = async (req, res) => 
 {
@@ -226,9 +228,23 @@ const viewsongs = async (req, res) =>
   const moviename = req.params.moviename;
   try 
   {
-    const songs = await Songs.find({moviename});
+    const songs = await Songs.find({'moviename':moviename});
     res.status(200).json(songs);
-    console.log(songs)
+    
+  } 
+  catch (error) 
+  {
+    res.status(500).send(error.message);
+  }
+};
+
+const viewalbumimg = async (req, res) => 
+{
+  const moviename = req.params.moviename;
+  try 
+  {
+    const album = await Albums.findOne({'moviename':moviename});
+    res.status(200).json(album);
   } 
   catch (error) 
   {
@@ -250,4 +266,4 @@ const viewsongs = async (req, res) =>
 //   }
 // };
 
-  module.exports = {viewusers,deleteuser,checkadminlogin,createalbum,viewalbums,albumimage,addsong,songaudio,viewsongs}
+  module.exports = {viewusers,deleteuser,checkadminlogin,createalbum,viewalbums,albumimage,addsong,songaudio,viewsongs,viewalbumimg}

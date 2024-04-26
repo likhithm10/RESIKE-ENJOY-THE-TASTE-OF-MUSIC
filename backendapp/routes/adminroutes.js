@@ -13,6 +13,7 @@ adminrouter.post("/checkadminlogin",admincontroller.checkadminlogin)
 
 adminrouter.post("/createalbum",admincontroller.createalbum)
 adminrouter.get("/viewalbums",admincontroller.viewalbums)
+adminrouter.get("/viewalbumimg/:moviename",admincontroller.viewalbumimg)
 adminrouter.get("/albumimage/:filename",admincontroller.albumimage)
 
 // upload and display Songs 

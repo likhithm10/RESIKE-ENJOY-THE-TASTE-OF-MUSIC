@@ -24,11 +24,11 @@ export default function AdminAlbums() {
    fetchEvents();
  }, []);
 
- const handlesongs = async (name) => {
+ const handlesongs = async (moviename) => {
   try 
   {
-    navigate(`/viewalbum/${name}`)
-    window.location.reload()
+    navigate(`/viewalbum/${moviename}`)
+    // window.location.reload()
   } 
   catch (error) 
   {
@@ -71,7 +71,7 @@ export default function AdminAlbums() {
     </div>
     
     <Routes>
-    <Route path="/viewalbum/:eventName" element={<ViewAlbum />} />
+    <Route path="/viewalbum/:moviename" element={<ViewAlbum />} />
         <Route path="/addsongs" element={<AddSongs/>}/>
     </Routes>
         </div>

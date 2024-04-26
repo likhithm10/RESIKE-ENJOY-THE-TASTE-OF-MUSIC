@@ -46,7 +46,7 @@ export default function AdminNavBar() {
         <Route path="/createalbum" element={<CreateAlbum/>}/>
         <Route path="/addsongs" element={<AddSongs/>}/>
         <Route path="/viewalbum" element={<ViewAlbum/>}/>
-        <Route path="/viewalbum/:eventName" element={<ViewAlbum />} />
+        <Route path="/viewalbum/:moviename" element={<ViewAlbum />} />
     </Routes>
 
     </div>
