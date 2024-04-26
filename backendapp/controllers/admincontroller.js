@@ -1,6 +1,7 @@
 const Admin = require("../models/Admin");
 const User = require("../models/User")
 const Albums = require("../models/Albums")
+const Songs = require("../models/Songs")
 
 const multer = require('multer')
 const path = require('path')
@@ -148,4 +149,105 @@ if (ext === '.png') {
       res.send(data);
     })
 }
-  module.exports = {viewusers,deleteuser,checkadminlogin,createalbum,viewalbums,albumimage}
+
+const songstorage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './songs/'); // Destination folder
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname); // File naming convention
+  }
+});
+
+const songupload = multer({ storage: songstorage }).single('file');
+
+const addsong = async (req, res) =>
+{
+  try 
+  {
+    songupload(req, res, async function (err) 
+    {
+      if (err) 
+      {
+        console.error(err);
+        return res.status(500).send(err.message);
+      }
+      
+      const { moviename, songname, date, singers, image } = req.body;
+      const fileName = req.file ? req.file.filename : undefined; // Extracting file name
+
+      const newSong = new Songs({
+        moviename,
+        songname,
+        date,
+        singers,
+        image,
+        file: fileName // Save only the file name
+      });
+
+      await newSong.save();
+      res.status(200).send('Song Added Successfully');
+    });
+  } 
+  catch (error) 
+  {
+    console.error(error);
+    res.status(500).send(error.message);
+  }
+};
+
+const songaudio = async (req, res) => 
+{
+  const filename = req.params.filename;
+  const filepath = path.join(__dirname, '../songs', filename);
+  console.log(filepath)
+
+    fs.readFile(filepath, (err, data) => {
+      if (err) 
+      {
+        console.error(err);
+        return res.status(500).send('Error reading image file');
+      }
+     
+    const ext = path.extname(filename).toLowerCase();
+    let contentType = 'application/octet-stream'; // Default to octet-stream
+
+if (ext === '.mp3') {
+  contentType = 'audio/mpeg';
+} 
+
+    res.setHeader('Content-Type', contentType);
+      res.send(data);
+    })
+}
+
+const viewsongs = async (req, res) => 
+{
+  const moviename = req.params.moviename;
+  try 
+  {
+    const songs = await Songs.find({moviename});
+    res.status(200).json(songs);
+    console.log(songs)
+  } 
+  catch (error) 
+  {
+    res.status(500).send(error.message);
+  }
+};
+
+// const fetchimg = async (req, res) => 
+// {
+//   try 
+//   {
+//     const album = req.params.album
+//     const img = await Albums.findOne({album});
+//     res.json(img);
+//   } 
+//   catch (error) 
+//   {
+//     res.status(500).send(error.message);
+//   }
+// };
+
+  module.exports = {viewusers,deleteuser,checkadminlogin,createalbum,viewalbums,albumimage,addsong,songaudio,viewsongs}
