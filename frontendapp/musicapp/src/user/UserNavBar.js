@@ -9,6 +9,8 @@ import UserArtists from './UserArtists'
 import UserPlaylist from './UserPlaylist'
 import UserProfile from './UserProfile'
 import Home from '../main/Home'
+import ViewSongs from './ViewSongs'
+import PlaySong from './PlaySong'
 //import MainNavBar from '../main/NavBar'
 
 
@@ -43,7 +45,10 @@ export default function UserNavBar() {
         <Route path="/userartists" Component={UserArtists}/>
         <Route path="/userplaylist" Component={UserPlaylist}/>
         <Route path="/userprofile" Component={UserProfile}/>
+        <Route path="/playsong/:songname" element={<PlaySong />} />
         <Route path="/logout" Component={Home}/>
+        
+        <Route path="/viewsongs/:moviename" element={<ViewSongs />} />
     </Routes>
     <div className="main_content">
       {/* <h2 align="right">

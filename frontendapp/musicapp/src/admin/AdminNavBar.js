@@ -10,6 +10,7 @@ import './adminnavbar.css'
 import CreateAlbum from './CreateAlbum'
 import AddSongs from './AddSongs'
 import ViewAlbum from './ViewAlbum'
+import PlaySong from './PlaySong'
 
 export default function AdminNavBar() {
 
@@ -47,6 +48,7 @@ export default function AdminNavBar() {
         <Route path="/addsongs" element={<AddSongs/>}/>
         <Route path="/viewalbum" element={<ViewAlbum/>}/>
         <Route path="/viewalbum/:moviename" element={<ViewAlbum />} />
+        <Route path="/playsong/:songname" element={<PlaySong  />} />
     </Routes>
 
     </div>

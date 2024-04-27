@@ -1,4 +1,7 @@
+const Admin = require("../models/Admin");
 const User = require("../models/User")
+const Albums = require("../models/Albums")
+const Songs = require("../models/Songs")
 
 const checkuserlogin = async (request, response) => 
   {
@@ -30,4 +33,19 @@ const checkuserlogin = async (request, response) =>
     }
   };
 
-  module.exports = {checkuserlogin,insertuser}
+ const viewplaysongs = async (req, res) => 
+{
+  const songname = req.params.songname;
+  try 
+  {
+    const songs = await Songs.find({'songname':{$ne:songname}});
+    res.status(200).json(songs);
+    
+  } 
+  catch (error) 
+  {
+    res.status(500).send(error.message);
+  }
+};
+
+  module.exports = {checkuserlogin,insertuser,viewplaysongs}

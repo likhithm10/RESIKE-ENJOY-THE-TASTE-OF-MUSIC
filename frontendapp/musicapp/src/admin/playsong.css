@@ -1,0 +1,208 @@
+/* .playButton, .pauseButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.playButton {
+  background-color: green;
+  color: white;
+}
+
+.pauseButton {
+  background-color: red;
+  color: white;
+} */
+/* ///////////////////////////// */
+/* 
+.songContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.songImage {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.songControls {
+  display: flex;
+  align-items: center;
+}
+
+.controlButton {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.timeBarContainer {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.timeBar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.timeDisplay {
+  font-size: 14px;
+}
+ */
+
+ .playlist {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.songContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.songImage {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.songDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.controlButton {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.timeBarContainer {
+  position: relative;
+  width: 100%;
+}
+
+.timeBar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #4caf50;
+}
+
+.pointer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 20px;
+  background-color: #4caf50;
+  cursor: pointer;
+}
+
+
+.timeDisplay {
+  font-size: 12px;
+  text-align: left;
+}
+
+.heartIcon {
+  color: rgb(253, 253, 253);
+  background-color: #000;
+}
+
+.card1 {
+  
+  box-shadow: 0 4px 8px 0 rgba(54, 54, 54, 0.2);
+  max-width: 2100px;
+  max-height: 500px;
+  width: 450px;
+  height: 350px;
+  text-align: center;
+  font-family: arial;
+  border: 1px solid black; /* Add a 1px solid border with a light gray color */
+  padding: 10px; /* Add some padding to the card content */
+  background-color: rgb(69, 96, 96);
+  border-radius: 10%;
+  margin-top: 50px;
+  
+margin-left: 450px;
+  
+}
+
+.controlButton {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: black; /* Change the color to black */
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.songImage
+{
+    width: 110px;
+    border-radius: 10%;
+    border: 1px solid black;
+    height: 100px;
+}
+
+
+.controls {
+margin-top: 20px;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.controlIcon {
+cursor: pointer;
+font-size: 20px;
+color: #000;
+transition: all 0.3s ease;
+}
+
+.controlIcon:hover {
+transform: scale(1.1);
+}

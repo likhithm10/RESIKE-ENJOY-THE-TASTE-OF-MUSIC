@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './viewuser.css'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 export default function UsersData() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [users, setUsers] = useState([]);
 
     const fetchUsers = async () => {

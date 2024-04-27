@@ -177,7 +177,11 @@ const addsong = async (req, res) =>
       
       const { moviename, songname, date, singers, image } = req.body;
       const fileName = req.file ? req.file.filename : undefined; // Extracting file name
+          
+    const ext = path.extname(fileName).toLowerCase();
+    let contentType = 'application/octet-stream'; // Default to octet-stream
 
+if (ext === '.mp3') {
       const newSong = new Songs({
         moviename,
         songname,
@@ -189,6 +193,10 @@ const addsong = async (req, res) =>
 
       await newSong.save();
       res.status(200).send('Song Added Successfully');
+    }
+    else{
+      res.status(200).send('Invalid file format');
+    }
     });
   } 
   catch (error) 
@@ -266,4 +274,19 @@ const viewalbumimg = async (req, res) =>
 //   }
 // };
 
-  module.exports = {viewusers,deleteuser,checkadminlogin,createalbum,viewalbums,albumimage,addsong,songaudio,viewsongs,viewalbumimg}
+const playsong = async (req, res) => 
+{
+  const songname = req.params.songname;
+  try 
+  {
+    const song = await Songs.find({'songname':songname});
+    // console.log(song)
+    res.status(200).json(song);
+  } 
+  catch (error) 
+  {
+    res.status(500).send(error.message);
+  }
+};
+
+  module.exports = {viewusers,deleteuser,checkadminlogin,createalbum,viewalbums,albumimage,addsong,songaudio,viewsongs,viewalbumimg,playsong}

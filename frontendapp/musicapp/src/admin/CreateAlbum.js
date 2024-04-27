@@ -56,7 +56,8 @@ export default function CreateAlbum() {
     {/* <h2 class="header" > I am in View Users page</h2>   */}
     <div className="info">
     <div>
-      <h3 align="center"><u>Add Album</u></h3>
+      <h3 align="center"><u>Create Album</u></h3><br/><br/>
+      <div align="center">
       {message ? <h4 align="center">{message}</h4> : null}
       {error ? <h4 align="center" style={{ color: 'red' }}>{error}</h4> : null}
       <form onSubmit={handleSubmit} encType="multipart/form-data">
@@ -71,6 +72,7 @@ export default function CreateAlbum() {
         </div>
         <button type="submit">Create</button>
       </form>
+    </div>
     </div>
     </div>
     </div>
